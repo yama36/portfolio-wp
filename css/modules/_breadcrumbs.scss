@@ -1,0 +1,23 @@
+.breadcrumbs {
+  background-color: $cWhite;
+
+  .breadcrumbs-container {
+    height: 50px;
+    width: 90vw;
+    @media (min-width: 900px) {
+      max-width: 900px;
+    }
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    @include font-size(s);
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      word-break: keep-all
+    }
+  }
+}

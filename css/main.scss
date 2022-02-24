@@ -1,0 +1,28 @@
+// setting
+@import "modules/reset";
+@import "modules/variables";
+@import "modules/template-setting";
+@import "modules/template-font";
+
+
+// parts
+@import "modules/header";
+@import "modules/HBmenu";
+@import "modules/top";
+@import "modules/breadcrumbs";
+@import "modules/pagination";
+@import "modules/contact";
+@import "modules/footer";
+
+
+
+// maincontent
+@import "breakpoints/base";
+
+@media (min-width: 900px) {
+  @import "breakpoints/900up";
+}
+
+@media (min-width: 1280px) {
+  @import "breakpoints/1280up";
+}

@@ -1,0 +1,22 @@
+@mixin font-size($font) {
+  $fonts: (
+    s: 1.2rem,
+    m: 1.6rem,
+    l: 1.8rem,
+    ll: 2.6rem,
+    lll: 3.6rem,
+
+    title: 4.8rem,
+    btn: 1.6rem,
+  );
+
+  @if type-of($font) == number {
+    font-size: $font / 10 * 1rem;
+  } @else {
+    font-size: map-get($fonts, $font);
+  }
+}
+
+@mixin line-height($height, $font) {
+  line-height: ($height / $font) * 1em;
+}

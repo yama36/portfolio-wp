@@ -1,0 +1,111 @@
+@mixin content-title($color: $cBlack) {
+  @include font-size(lll);
+  color: $color;
+}
+
+$content-width: 900px;
+
+// consept
+#consept {
+  .consept-container {
+    width: $content-width;
+
+    .consept__1 {
+      h3 {
+        padding-bottom: 65px;
+      }
+    }
+  }
+}
+
+// strengths
+#strengths {
+  .strengths-container {
+    width: $content-width;
+  }
+
+  .strengths__item {
+    .strengths-background {
+      width: 350px;
+    }
+
+    .strengths__item-container {
+      width: calc(($content-width - 550) * 1px);
+    }
+  }
+
+  .strengths__plan {
+    h3 {
+      padding-top: 61px;
+      padding-bottom: 25px;
+    }
+
+    .btn {
+      width: 200px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    img {
+      max-width: $content-width;
+      height: 217px;
+    }
+  }
+
+}
+
+// success
+#success {
+  .success-container{
+    h2 {
+      @include font-size(36);
+      @include line-height(50, 36);
+    }
+
+    .success__list {
+      max-width: $content-width;
+    }
+  }
+}
+
+// howto
+#howto {
+  .howto-container {
+    width: $content-width;
+    
+    .howto__list {
+      .howto__item {
+        &__number {
+          width: 64px;
+        }
+      }
+    }
+  }
+}
+
+// FAQ
+#FAQ {
+  .FAQ-container {
+    width: $content-width;
+  }
+}
+
+
+.blog-news-container {
+  margin: 0 auto;
+  @include margin-bottom(119);
+  display: flex;
+  justify-content: center;
+  max-width: $content-width;
+}
+
+// blog
+#blog {
+  width: 50%;
+}
+
+// news
+#news {
+  width: 50%;
+}

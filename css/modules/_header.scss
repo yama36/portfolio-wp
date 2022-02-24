@@ -1,0 +1,125 @@
+#header {
+  position: relative;
+  width: 100vw;
+  height: 80px;
+
+  .header {
+    &__right-content {
+      display: none;
+    }
+
+    &__left-content {
+      display: none;
+    }
+  }
+
+  .header__mobile-content {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    background-color: #FFF;
+    box-shadow: 0px 1px 5px 0px rgba($color: #000000, $alpha: .1);
+
+    .header__headding {
+      img {
+        margin: 26px 10px ;
+      }
+    }
+  }
+}
+
+@media (min-width: 1279px) {
+  #header {
+    .header {
+      &-container {
+        height: 80px;
+        width: 100%;
+        background-color: #FFF;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 100;
+      }
+
+      &__left-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .header__ {
+          &headding {
+            img {
+              margin: 27px 0 ;
+              margin-left: 15px;
+              margin-right: 28px;
+            }
+          }
+
+          &nav-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            li {
+              @include font-size(m);
+              font-weight: bold;
+              padding-right: 28px;
+            }
+          }
+        }
+      }
+
+      &__right-content {
+        display: flex;
+
+        .header__ {
+          &ex-container {
+            padding: 15px 23px;
+            display: flex;
+            flex-direction: column;
+
+            .header__time {
+              @include font-size(s);
+              @include line-height(20, 12);
+              text-align: right;
+              margin-top: auto;
+              padding-bottom: 10px;
+            }
+
+            .header__phone {
+              display: flex;
+
+              &__img {
+                margin-right: 5px;
+              }
+
+              &__number {
+                @include font-size(m);
+                font-weight: bold;
+              }
+            }
+          }
+
+          &request {
+            @include btn1($cOrange, #FFF);
+            margin: 15px 0;
+            margin-right: 10px
+          }
+
+          &contact {
+            @include btn1($cBlack, #FFF);
+            margin: 15px 0;
+            margin-right: 10px
+          }
+        }
+      }
+    }
+
+    .header__mobile-content {
+      display: none;
+    }
+  }
+}

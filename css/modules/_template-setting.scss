@@ -1,0 +1,24 @@
+// color
+$cWhite: #F8F8F8;
+$cBlack: #1B224C;
+$cGray: #D5D5D5;
+$cOrange: #F5A623;
+
+
+// max-width
+.content-width {
+  margin: 0 auto;
+  max-width: 61.5vw;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-size:1.6rem; /* 16px */
+  color: $cBlack;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}

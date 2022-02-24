@@ -1,0 +1,103 @@
+#contact {
+  .contact-container {
+    width: 100vw;
+
+    .contact-container1 {
+      @include content-padding(m);
+      position: relative;
+
+      .contact {
+        &__title {
+          @include content-title(#FFF);
+          @include margin-bottom(s);
+        }
+
+        &__btn {
+          @include btn2($cOrange, #FFF, 200px);
+          @include margin-bottom(ss);
+        }
+
+        &__request {
+          text-align: center;
+          color: #FFF;
+
+          a {
+            text-decoration: underline;
+          }
+        }
+
+        &__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          z-index: -5;
+          top: 0;
+        }
+      }
+    }
+
+    .contact-container2 {
+      @include content-padding(s);
+      position: relative;
+      text-align: center;
+
+      h3 {
+        @include font-size(l);
+        @include margin-bottom(ss);
+        font-weight: bold;
+      }
+
+      div {
+        @include font-size(lll);
+        @include margin-bottom(ss);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  #contact {
+    .contact-container {
+      .contact-container1 {
+        @include content-padding(70, 41);
+        position: relative;
+
+        .contact {
+          &__title {
+            @include margin-bottom(15);
+            @include font-size(32);
+          }
+
+          &__btn {
+            @include btn2($cOrange, #FFF, 280px);
+            @include margin-bottom(22);
+            height: 50px;
+            line-height: 50px;
+          }
+        }
+      }
+
+      .contact-container2 {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+
+        h3 {
+          flex-basis:30%;
+          text-align: right;
+        }
+
+        div {
+          margin: 0 20px;
+        }
+
+        p {
+          flex-basis: 30%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

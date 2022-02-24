@@ -1,0 +1,137 @@
+#top {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .top {
+    &-container {
+      text-align: center;
+
+      h2 {
+        font-size: calc(80vw / 10);
+        @include margin-bottom(m);
+        color: #FFF;
+        font-weight: bold;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+      }
+
+      p {
+        @include line-height(31, 18);
+        color: #FFF;
+
+        &:last-of-type {
+          @include margin-bottom(s);
+        }
+      }
+
+      .top__request {
+        @include btn2($cOrange, #FFF, 260px);
+        height: 60px;
+        @include margin-bottom(s);
+      }
+
+      .top__contact {
+        color: #FFF;
+        @include font-size(l);
+        text-decoration-line: underline;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 75% 0%;
+      position: absolute;
+      left: 0;
+      z-index: -10;
+    }
+  }
+}
+
+#singletop {
+  .singletop-container {
+    width: 100vw;
+    height: 221px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 32px;
+      line-height: 54px;
+      color: #FFF;
+      font-weight: bold;
+      position: relative;
+      z-index: 0;
+      text-align: center;
+      width: 90vw;
+    }
+
+    .singletop {
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        left: 0;
+        z-index: -10;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  #top {
+    .top {
+      &-container {
+        h2 {
+          @include font-size(title);
+          @include margin-bottom(25);
+
+        }
+
+        p {
+          @include font-size(18);
+
+          &:last-of-type {
+            @include margin-bottom(51);
+          }
+        }
+
+        .top__request {
+          @include margin-bottom(22);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  #top {
+    width: 100vw;
+    height: 476px;
+    align-items: initial;
+
+    .top {
+      &-container {
+        margin-top: 116px;
+
+        h2 {
+          @include margin-bottom(26);
+        }
+
+        p {
+          @include line-height(31, 18);
+        }
+      }
+    }
+  }
+}
